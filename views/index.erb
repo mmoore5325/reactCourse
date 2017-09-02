@@ -25,7 +25,7 @@
 // CREATE VARIABLES FOR JSX AND LOCATION
 
   // VARIABLE FOR JSX
-  var hello = <h1>Hello World</h1>
+  // var hello = <h1>Hello World</h1>
 
   // VARIABLE FOR LOCATION
   var destination = document.getElementById("app");
@@ -33,7 +33,10 @@
 
 ReactDOM.render(
   // REACT WHAT - JSX
-  hello,
+  <div>
+    <h1>Hello World</h1>
+    <h2>Have a good day.</h2>
+  </div>,
   //REACT WHERE - DIV WITH ID OF "APP"
   destination
 );
