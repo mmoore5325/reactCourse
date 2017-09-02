@@ -17,25 +17,39 @@
 <body>
 <!-- DESIGNATED LOCATION TO INSERT REACT CONTENT -->
 <div id="app">React has not rendered yet.</div>
-
-
+<p id="paragraph">Not Rendered</p>
+<a id="anchortag" href="http://www.minedminds.org">Mined Minds</a>
+<ul id="unordered">
+  <li>One</li>
+  <li>Two</li>
+  <li>Three</li>
+</ul>
 <!-- JAVASCRIPT -->
 <script type="text/babel">
 
-// CREATE VARIABLES FOR JSX AND LOCATION
-
-  // VARIABLE FOR JSX
-  var hello = <h1>Hello World</h1>
-
-  // VARIABLE FOR LOCATION
-  var destination = document.getElementById("app");
-  //RENDER REACT TO THE DOM, ACCEPTS 2 ARGUMENTS, REACT WHAT AND REACT WHERE
+// RENDER REACT TO THE DOM - WILL ACCEPT TWO ARGUMENTS (REACT WHAT, REACT WHERE)
 
 ReactDOM.render(
   // REACT WHAT - JSX
-  hello,
+  <h1>hello world</h1>,
   //REACT WHERE - DIV WITH ID OF "APP"
-  destination
+  document.getElementById("app")
+);
+ReactDOM.render(
+  <p>I am a paragraph</p>,
+  document.getElementById("paragraph")
+);
+ReactDOM.render(
+  <a href="http://www.google.com">Google</a>,
+  document.getElementById("anchortag")
+);
+ReactDOM.render(
+  <ul>
+    <li>Food</li>
+    <li>Weights</li>
+    <li>Computers</li>
+  </ul>,
+  document.getElementById("unordered")
 );
 </script>
 
